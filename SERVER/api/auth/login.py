@@ -11,7 +11,7 @@ router = APIRouter()
 
 @router.post("/user/login")
 async def login(user:User):
-    prisma_user=await PrismaUser.prisma().findUnique(where={"email":user.email})
+    prisma_user=await PrismaUser.prisma().find_unique(where={"email":user.email})
     if prisma_user is None:
         return {"error":"User not found"}
     else:
