@@ -1,4 +1,2 @@
-
-# Keep environment variables out of version control
+.venv
 .env
-__pycache__
